@@ -13,8 +13,8 @@
         <div class="header">
             <div class="contact">
                 <div class="info">
-                    <a href="tel:+91987654321"><i class="fas fa-phone"></i> +91 987654321</a>
-                    <a href="mailto:admin@hotel.com"><i class="far fa-envelope"></i> admin@hotel.com</a>
+                    <a href="tel:+918360806758"><i class="fas fa-phone"></i> +91 8360806758</a>
+                    <a href="mailto:jashan113114@gmail.com"><i class="far fa-envelope"></i> admin@hotel.com</a>
                 </div>
                 <div class="social">
                     <a href="https://www.facebook.com"><i class="fab fa-facebook fa-lg"></i></a>
