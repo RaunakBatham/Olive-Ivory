@@ -1,3 +1,3 @@
 <?php
-// User Registration for the Website.
+// User Signup Page for Website.
 ?>
