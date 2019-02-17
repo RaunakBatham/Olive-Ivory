@@ -43,7 +43,21 @@
          margin-left:91%;
          color:#fff;
 		}	
-   
+		.txt
+		{
+			background-color: #fff;
+			font color: black;
+			clear:both;
+			margin-left:27%;
+			text-align:justify;
+			width:50%;
+			float: right;
+			font-size:15px;
+            letter-spacing: .05em;
+			font-family: montserratlight , sans-serif;
+			line-height: 170%;
+            margin-right:16%;
+		}
     
     
     
