@@ -22,3 +22,9 @@ body {
 .fab {
   color: white;
 }
+.inf a{
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  cursor: default;
+}
