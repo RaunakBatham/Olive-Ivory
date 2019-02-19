@@ -76,19 +76,6 @@ function scrollFunction() {
 </div>
 
 
-<!--<div class="banner">
-    <h1>"Palava's beating Heart"</h1>
-    <p>is here</p>
-</div>-->
-
-
-
-
-
-
-<!--carousel Images-->
-
-
 
             
             <div class="carousel">
