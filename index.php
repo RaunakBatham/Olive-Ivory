@@ -3,10 +3,7 @@
     	<title>Olive Ivory</title>
         <link rel="stylesheet" href="packages/fontawesome-free-5.7.2-web/css/all.css"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="home.css"/>
-
-
-        
+        <link rel="stylesheet" href="home.css"/>        
     </head>
 
     <body>
@@ -22,37 +19,83 @@
                     <a href="https://www.twitter.com"><i class="fab fa-twitter fa-lg"></i></a>
                 </div>
             </div>
-
-
             <div id="navbar">
-                <table border="0" width="100%">
-                    <tr><td align="right" width="47%">
-    <div class="dropdown">
-  <button class="dropbtn"><a href="#hotel">Hotel</a></button>
-  <div class="dropdown-content">
-    <a href="index.php">Link 1</a>
-    <a href="aboutus.html">Link 2</a>
-    <a href="history.html">Link 3</a>
-  </div>
-</div>
+            <div id="back">
 
-     
-    <a href="#contact">Rooms</a>
-    <a href="#restaurant">Restaurant</a>
-<a href="#business">Business Offer</a></td></td>
-        <td align="center">
- <img src="./images/logo.png" width="60px" height="60px"></td>
- <td style="padding-left: 50px;" >
-    <a href="#home">Occational Events</a>
-    <a href="#contact">Relaxation</a>
-    <a href="./about-us/aboutus.html">Location</a>
-    <a href="#about">Contact</a>
+            </div>
+            <nav>
+            <div id="inner">
+                <ul class="list">
+                    <li><a href="#">Home</a> 
+                        <ul class="list2">
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">asdlsa</a></li>
+                            <li><a href="#">asdlasjda</a></li>
+                            <li><a href="#">sadsaljk</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Rooms</a></li>
+                    <li><a href="#">Restaurent</a>
+                        <ul class="list2">
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">asdlsa</a></li>
+                            <li><a href="#">asdlasjda</a></li>
+                            <li><a href="#">sadsaljk</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Business Offer</a>
+                        <ul class="list2">
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">asdlsa</a></li>
+                            <li><a href="#">asdlasjda</a></li>
 
-</td>
-</tr>
-</table>
+                            <li><a href="#">asdlasjda</a></li>
+                            <li><a href="#">asdlasjda</a></li>
+                            <li><a href="#">asdlasjda</a></li>
+                            <li><a href="#">sadsaljk</a></li>
+                        </ul>
+                    </li>
 
-</div>
+                    <li class="logo"><a style="border: none;" href="#"><img src="./images/logo.png"></a></li>
+
+                    <li><a href="#">OCCASIONAL EVENTS</a>
+                        <ul class="list2">
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">asdlsa</a></li>
+                            <li><a href="#">asdlasjda</a></li>
+                            <li><a href="#">sadsaljk</a></li>
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">asdlsa</a></li>
+                            <li><a href="#">asdlasjda</a></li>
+                            <li><a href="#">sadsaljk</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">RELAXATION</a>
+                        <ul class="list2">
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">asdlsa</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">LOCATION</a>
+                        <ul class="list2">
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">asdlsa</a></li>
+                            <li><a href="#">asdlasjda</a></li>
+                            <li><a href="#">sadsaljk</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">CONTACT</a>
+                        <ul class="list2">
+                            <li><a href="#">NEWS</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="book"><a href="#">book</a></li>
+                </ul>
+        </div>
+        </nav>
+        </div>
 
 
 
@@ -90,6 +133,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="jq.js"></script>
         <script src="index.js"></script>
     </body>
 </html>
