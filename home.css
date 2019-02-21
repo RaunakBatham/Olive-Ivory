@@ -30,11 +30,12 @@ body {
   cursor: default;
 
 }
-
+/*-------------------------------------------NAVBAR CODE------------------*/
 #back{
 	position: absolute;
+	top: 20px;
 	width: 100%;
-	height: 200px;
+	height: 150px;
 	background: black;
 	filter: blur(90px);
 }
@@ -79,6 +80,8 @@ nav #inner .list{
 	border-color: transparent;
 	letter-spacing: .06em;
 	font-weight: 400;
+	overflow: hidden;
+	white-space: nowrap;
 }
 .list li:hover>a{
 	border: 1px solid gold;
