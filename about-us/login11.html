@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../packages/fontawesome-free-5.7.2-web/css/all.css">
+   <link rel="stylesheet" href="../home.css"/>
+ 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+
+   background: url('../images/background.png');
+    background-repeat: repeat;
+}
+
+    .column {
+  float: left;
+ 
+  width: 25%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.box{
+width:400px;
+height:400px;
+margin:100px auto;
+text-align: center;
+}
+input[type="text"],input[type="email"],input[type="password"]:active{
+      border:none;
+}
+.box h1{
+
+    color:black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.box input[type="text"],input[type="email"],input[type="password"]{
+ width:300px;
+ height:30px;
+ margin-bottom: 25px;
+ font-size: 15px;
+ border:transparent;
+ padding-left: 45px;
+ background:transparent;
+ border-bottom: 1px solid black;
+}
+button[type="submit"]{
+      background:black;
+      cursor: pointer;
+      width:150px;
+      height:35px;
+      border: 1px solid black;
+      font-size:20px;
+      color: #fff;
+    }
+    .social{
+  float: right;
+}
+.social a{
+  padding:1px;
+  margin-right: 8px;
+  cursor: default;
+}
+.main {
+  float:left;
+  width:80%;
+  padding:0 10%;
+  text-align: justify;
+  color:white;
+  letter-spacing: .05em;
+  font-family: montserratlight , sans-serif;
+  line-height: 170%
+  font-size:2vw;
+}
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .menu, .main, .column,.main,.row,.box,.box h1{
+    width:100%;
+
+  }
+  
+  
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+      <div class="contact">
+         <div class="info">
+             <a href="tel:+918360806758"><i class="fas fa-phone"></i> +91 8360806758</a>
+             <a href="mailto:jashan113114@gmail.com"><i class="far fa-envelope"></i> admin@hotel.com</a>
+         </div>
+         <div class="social">
+             <a href="https://www.facebook.com"><i class="fab fa-facebook fa-lg"></i></a>
+             <a href="https://www.google.com"><i class="fab fa-google-plus fa-lg"></i></a>
+             <a href="https://www.twitter.com"><i class="fab fa-twitter fa-lg"></i></a>
+         </div>
+      </div><br/>
+   </div>
+  <div class="row ">
+   <div class="column">
+   <div class="box">
+    <h1>Login</h1><br>
+<form method="POST" action="sanitization.php">    
+<i class="fa fa-user icon" aria-hidden="true"></i>
+<input type="email" placeholder=" Enter your Email"name="email"data-toggle="popover" data-content="<?= $_SESSION['error']['email']?>"><br/>
+<i class="fa fa-lock icon" aria-hidden="true"></i>
+<input type="password" placeholder="Enter your password"name="password"><br/>
+<button type="submit">Submit</button>
+</form>
+</div>
+
+   </div>
+   <!--
+   <div class="column">
+    <img src="../images/home2.jpg"  style="width:100%">
+   </div>
+   <div class="column">
+    <img src="../images/home3.jpg"  style="width:100%">
+   </div>-->
+  </div>
+</div>
+</div>
+   <div class="main">
+    <h1>News</h1><br>
+    <p>We have many years of experience, extensive conference facilities, as well as technical and catering equipment, and we will be more than happy to organise your meeting – both in our building, in a tent at the hotel's patio, as well as in any other place of your choosing.</p>
+</div>
+</body>
+</html>

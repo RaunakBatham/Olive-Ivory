@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../packages/fontawesome-free-5.7.2-web/css/all.css">
+   <link rel="stylesheet" href="../home.css"/>
+ 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+
+   background: url('../images/background.png');
+    background-repeat: repeat;
+}
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float:left;
+  width:20%;
+  text-align:center;
+  padding: 0 20px;
+}
+.menu a {
+  
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+  color:black;
+}
+.main {
+  float:left;
+  width:80%;
+  padding:0 10%;
+  text-align: justify;
+  color:white;
+  letter-spacing: .05em;
+  font-family: montserratlight , sans-serif;
+  line-height: 170%
+  font-size:2vw;
+}
+.left {
+  background-color:white;
+  float:left;
+  width:20%;
+  padding:30px;
+  margin-top:7px;
+  text-align:center;
+  text-shadow: 10px;
+  font-size:1em;
+}
+li:before{
+      content: "\25C8";
+      color:gold;
+      font-size:1em;
+    }
+    ul{
+      list-style-type: none;
+      clear:both;
+      color:white;
+      font-size:1em;
+      letter-spacing: 0em;
+    }
+    .column {
+  float: left;
+ 
+  width: 25%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .menu, .main, .left ,ul,li,.column,.row{
+    width:100%;
+
+  }
+  
+  
+}
+</style>
+</head>
+<body>
+
+
+  <div class="row ">
+   <div class="column">
+    <img src="../images/home.jpg" style="width:100%">
+   </div>
+   <div class="column">
+    <img src="../images/home1.jpg"style="width:100%">
+   </div>
+   <div class="column">
+    <img src="../images/home2.jpg"  style="width:100%">
+   </div>
+   <div class="column">
+    <img src="../images/home3.jpg"  style="width:100%">
+   </div>
+  </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

@@ -158,3 +158,9 @@ footer{
 #head{
 	font-size:50px;
 }
+@media (max-width: 567px){
+
+  #thumbs{
+    float:none;
+  }
+}

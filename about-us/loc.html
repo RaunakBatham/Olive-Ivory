@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../packages/fontawesome-free-5.7.2-web/css/all.css">
+   <link rel="stylesheet" href="../home.css"/>
+ 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+
+   background: url('../images/background.png');
+    background-repeat: repeat;
+}
+    .column {
+  float: left;
+  padding: 5px;
+  width: 31%;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.info {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  cursor: default;
+  
+}
+.google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .column,.row,.info,.google-maps{
+    width:100%;
+
+  }
+  
+  
+}
+</style>
+</head>
+<body>
+
+
+  <div class="row ">
+   <div class="column">
+        <h1><b><p style="color:white">Address</p></b></h1>
+        <p style="color:white">Chaadar Road<br>Takia Colony<br>Palawa City</p>
+        <p style="color:white">Mumbai-144111</p>
+   </div>
+   <div class="column">
+        <h1><b><p style="color:white">Contact Us</p></b></h1>
+        <div class="info">
+        <a href="tel:+918360806758"><i class="fas fa-phone"></i> +91 8360806758</a><br>
+             <a href="mailto:jashan113114@gmail.com"><i class="far fa-envelope"></i> admin@hotel.com</a></div><br><br><br>
+             <a href="https://www.facebook.com"><i class="fab fa-facebook fa-lg"></i></a>&nbsp;&nbsp;&nbsp;
+             <a href="https://www.google.com"><i class="fab fa-google-plus fa-lg"></i></a>&nbsp;&nbsp;&nbsp;
+             <a href="https://www.twitter.com"><i class="fab fa-twitter fa-lg"></i></a>
+   </div>
+   <div class="column">
+    <h1><b><p style="color:white">Location</p></b></h1>
+  <div class="google-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.185833993463!2d72.81799441472788!3d18.967398587150342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce6cf5d15557%3A0x800a8ea61fa25eb!2sPalava+City!5e0!3m2!1sen!2sin!4v1550609798611" width="400" height="250" frameborder="0" style="border:0" ></iframe></p>
+</div>
+   </div>
+  </div>
+</div>
+</div>
+
+
+
+</body>
+</html>
