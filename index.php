@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Olive Ivory</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -67,7 +67,33 @@
 	top:30px!important;
 	margin-top:2px;
 }
-
+/*AboutIntro*/
+.aboutintro{
+    margin-top: 10px;
+    width: 100%;
+    background-color: gray;
+    background-image: url('images/AboutBack.jpg');
+    height: 520px;
+    text-align: center;
+    padding-top: 50px;
+}
+.introbox{
+    background-color: white;
+    max-width: 320px;
+    margin: 0 auto;
+}
+.introbottom{
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+.introbottom a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid gold;
+    padding: 10px 50px;
+    white-space: nowrap;
+}
 
 /* Gallery */
 * {
@@ -339,6 +365,23 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+<!------------------------------------------------------------------------------------------>
+
+<div class="aboutintro">
+        <div class="introbox">
+            <div class="introtop">
+                <h1>Olive Ivory</h1>
+                <p>Combining traditions with modernity through generations</p>
+            </div>
+            <div class="introbottom">
+                <p>ICON</p>
+                <p>Our jewel of the 19th century architecture is located in the very centre of Lublin, next to the Litewski Square, only 350 meters from the Old Town. Comfortable rooms and suites, an elegant restaurant, a cafe and a gym, as well as a rich conference offer - it's only a fraction of what we have to offer. Let's Meet in the centre of Lublin!</p>
+                <a href="#">READ MORE</a>
+            </div>
+        </div>
+    </div>
+<!------------------------------------------------------------------------------------------>
 <div class="row ">
    <div class="column">
     <img src="./images/home.jpg" style="width:100%">
