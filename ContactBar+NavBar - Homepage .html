@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ContactBar & NavBar</title>
@@ -24,24 +25,28 @@
         }
         .contactleft {
             float: left;
+            color:white;
         }
         .contactleft * {
             margin-left: 10px;
         }
         .contactright {
             float: right;
+            color:white;
         }
         .contactright * {
             margin-right: 10px;
         }
 /*---------------------------------------------------------Navigation Bar--------------------*/
         .navbar {
-            position: absolute;
+            position: fixed;
             width: 100%;
             background: #333;
             color: white;
             text-align: center;
+            transition:.5 height ease-in ;
         }
+
         .navbar ul li {
             position: relative;
             display: inline-block;
@@ -150,9 +155,12 @@
             .navbar ul ul a:hover{
                 background-color: transparent;
             }
+            .i{
+                color:white;
+            }
         }
     </style>
-    <link rel="stylesheet" type="text/css" href="packages/fontawesome-free-5.7.2-web/css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
 
@@ -160,16 +168,16 @@
 
         <div class="contactbar">
             <div class="contactleft">
-                <a href="phone:9876543210" id="phone">(*) 9876543210</a>
-                <a href="mail:admin@email.com" id="email">(*) admin@email.com</a>
+                <a href="phone:9876543210" id="phone"><i class="fa fa-phone"></i> 9876543210</a>
+                <a href="mail:admin@email.com" id="email"><i class="fa fa-envelope"></i> admin@email.com</a>
             </div>
             <div class="contactright">
-                <a href="https://www.facebook.com" id="fb">(FB)</a>
-                <a href="https://www.instagram.com" id="insta">(Insta)</a>
-                <a href="https://www.Twitter.com" id="insta">(Tweet)</a>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+             <a href="https://www.google.com"><i class="fab fa-google-plus "></i></a>
+             <a href="https://www.twitter.com"><i class="fab fa-twitter "></i></a>
             </div>
         </div>
-        <div class="navbar">
+    <div class="navbar" id="navbar1">
             <div class="menu" onclick="openNav()">
               <div class="bar1"></div>
               <div class="bar2"></div>
@@ -242,8 +250,32 @@
         </div>
 
     </div>
+    <div style ="height:1450px; background:black; width:500px;">
+    </div>
 
 
+    <script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    
+  if (window.scrollY > 20 ) {
+    
+   
+   document.getElementById("navbar1").style.height = "90px";
+   document.getElementById("navbar1").style.top = "0px";
+   
+  }
+    
+  else {
+    
+    
+    document.getElementById("navbar1").style.height = "110px";
+     document.getElementById("navbar1").style.top = "15px";
+   
+  }
+}
+</script>
     <script>
     function openNav() {
         var x = document.getElementById("navigation");
