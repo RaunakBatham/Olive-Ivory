@@ -1,0 +1,10 @@
+.ReserveBar{
+  background-image: url('home2.jpg');
+  height: auto;
+  text-align: center;
+}
+input {
+  height: 2.5em;
+  width: 15em;
+  margin: 20px 10px;
+}
