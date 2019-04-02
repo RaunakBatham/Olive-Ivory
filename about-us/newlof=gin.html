@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../packages/fontawesome-free-5.7.2-web/css/all.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+
+   background: url('../images/home1.jpg');
+    background-repeat: repeat;
+}
+
+    .column {
+  float: right;
+  width: 35%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.box{
+width:400px;
+height:400px;
+margin:100px auto;
+text-align: center;
+}
+.box h1{
+
+    color:black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.box input[type="email"],input[type="password"]{
+ width:300px;
+ height:30px;
+ margin-bottom: 25px;
+ font-size: 15px;
+ border:transparent;
+ padding-left: 45px;
+ background:transparent;
+ border-bottom: 1px solid black;
+}
+.box input[type="email"]:focus,input[type="password"]:focus
+{
+    border:0px;
+    border-bottom: 1px solid black;
+}
+button[type="submit"]{
+      background:black;
+      cursor: pointer;
+      width:150px;
+      height:35px;
+      border: 1px solid black;
+      font-size:20px;
+      color: #fff;
+    }
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+   .column,.row,.box,.box h1{
+    width:100%;
+
+  }
+  
+  
+}
+</style>
+</head>
+<body>
+
+  <div class="row ">
+   <div class="column">
+   <div class="box">
+    <h1>Login</h1><br>
+<form method="POST" action="sanitization.php">    
+<i class="fa fa-user icon" aria-hidden="true"></i>
+<input type="email" placeholder=" Enter your Email"name="email"data-toggle="popover" data-content="<?= $_SESSION['error']['email']?>"><br/>
+<i class="fa fa-lock icon" aria-hidden="true"></i>
+<input type="password" placeholder="Enter your password"name="password"><br/>
+<button type="submit">Submit</button>
+</form>
+</div>
+
+   </div>
+</body>
+</html>

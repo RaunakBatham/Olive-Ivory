@@ -376,8 +376,8 @@
             </div>
             <div class="introbottom">
                 <p>ICON</p>
-                <p>Our jewel of the 19th century architecture is located in the very centre of Lublin, next to the Litewski Square, only 350 meters from the Old Town. Comfortable rooms and suites, an elegant restaurant, a cafe and a gym, as well as a rich conference offer - it's only a fraction of what we have to offer. Let's Meet in the centre of Lublin!</p>
-                <a href="#">READ MORE</a>
+                <p>The five-star Hotel Olive Ivory is a jewel of the 20th century architecture, located in the strict centre of Palawa City, Mumbai. Because of our prestigious location, we have already been a perfect haven for 10 years both for people travelling as a tourist, as well as for business purposes .</p>
+                <a href="aboutus.html">READ MORE</a>
             </div>
         </div>
     </div>

@@ -2,15 +2,13 @@
 <html>
 <head>
 	<link rel="stylesheet" href="../packages/fontawesome-free-5.7.2-web/css/all.css">
-   <link rel="stylesheet" href="../home.css"/>
- 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
 
-   background: url('../images/background.png');
+   background: url('../images/home1.jpg');
     background-repeat: repeat;
 }
 
@@ -41,7 +39,7 @@ input[type="text"],input[type="email"],input[type="password"]:active{
     font-size: 50px;
 }
 
-.box input[type="text"],input[type="email"],input[type="password"]{
+.box input[type="email"],input[type="password"]{
  width:300px;
  height:30px;
  margin-bottom: 25px;
@@ -49,7 +47,11 @@ input[type="text"],input[type="email"],input[type="password"]:active{
  border:transparent;
  padding-left: 45px;
  background:transparent;
- border-bottom: 1px solid black;
+}
+.box input[type="email"]:focus,input[type="password"]:focus
+{
+    border:0px;
+    border-bottom: 1px solid black;
 }
 button[type="submit"]{
       background:black;
@@ -65,8 +67,10 @@ button[type="submit"]{
 }
 .social a{
   padding:1px;
-  margin-right: 8px;
+  margin-right: 5px;
+  margin-top: 0px;
   cursor: default;
+  color:white;
 }
 .main {
   float:left;
@@ -79,9 +83,12 @@ button[type="submit"]{
   line-height: 170%
   font-size:2vw;
 }
+.info a{
+  color:white;
+}
 @media only screen and (max-width:620px) {
   /* For mobile phones: */
-  .menu, .main, .column,.main,.row,.box,.box h1{
+  .menu, .main, .column,.main,.row,.info,.box,.box h1{
     width:100%;
 
   }
@@ -98,7 +105,7 @@ button[type="submit"]{
              <a href="tel:+918360806758"><i class="fas fa-phone"></i> +91 8360806758</a>
              <a href="mailto:jashan113114@gmail.com"><i class="far fa-envelope"></i> admin@hotel.com</a>
          </div>
-         <div class="social">
+         <div class="social" >
              <a href="https://www.facebook.com"><i class="fab fa-facebook fa-lg"></i></a>
              <a href="https://www.google.com"><i class="fab fa-google-plus fa-lg"></i></a>
              <a href="https://www.twitter.com"><i class="fab fa-twitter fa-lg"></i></a>
