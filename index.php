@@ -67,6 +67,9 @@
 	top:30px!important;
 	margin-top:2px;
 }
+.bg-black{
+  background-color: #222 !important;
+}
 /*-------------------------------------------------------------------------ReservationBAR*/
 .ReserveBar{
   background-color: #eee;
@@ -249,7 +252,7 @@
             </div>
         </div>	
     </div>
- <nav class="navbar navbar-expand-md py-4 bg-dark navbar-dark sticky-top">
+ <nav class="navbar navbar-expand-md py-4 bg-black navbar-dark sticky-top">
    <button class="  mr-auto navbar-toggler no-focus " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
    	<img class="" src="http://assets.limetray.com/assets/image_manager/uploads/4697/hamburger-icon.png" height="50">
   </button><!-- Brand -->
