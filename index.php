@@ -72,7 +72,7 @@
 }
 /*-------------------------------------------------------------------------ReservationBAR*/
 .ReserveBar{
-  background-color: #eee;
+  background-image:url('./images/background.png');
   margin-top: 10px;
   height: auto;
   text-align: center;
