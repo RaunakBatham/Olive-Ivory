@@ -67,7 +67,9 @@
 	top:30px!important;
 	margin-top:2px;
 }
-
+.bg-black{
+  background-color: #222 !important;
+}
 
  /*------------------------------STYLE OF CURRENT PAGE INDICATOR*/
  .current-page{
@@ -274,7 +276,7 @@
 <form method="POST" action="../CustomerDetails">
 <div class="rooms">
     <div class="roominfo">
-        <img src="room.jpg" alt="RoomIMG"/>
+        <img src="./images/image10.jpg" alt="RoomIMG"/>
         <div class="roomnames">
             <p>Deluxe Room</p>
             <p>room info adfs fsdf sfd sd f as s df s df as dg  t h r  r  sg df  sdgarg ar g a gragrg</p>
@@ -293,7 +295,7 @@
         <input type="submit" value="book"/>
     </div>
     <div class="roominfo">
-        <img src="room.jpg" alt="RoomIMG"/>
+        <img src="./images/image11.jpg" alt="RoomIMG"/>
         <div class="roomnames">
             <p>Deluxe Room 2</p>
             <p>room info adfs fsdf sfd sd f as s df s df as dg  t h r  r  sg df  sdgarg ar g a gragrg</p>
@@ -342,28 +344,23 @@
     </div>
   </div>
   <!-------------------------------------------------------------------------------END OF FOOTER-->
-
-
-
-
-
-
+</body>
 <script>
-	$(window).on('scroll', function () {
+  $(window).on('scroll', function () {
     if ($(this).scrollTop() > 30) {
-    	console.log("feel")
+      console.log("feel")
         
             $('.navbar').removeClass('py-4');
             $('.navbar').addClass('py-2');
         
     } else {
-    	console.log("feelnot")
+      console.log("feelnot")
         if ($('.navbar').hasClass('py-2')) {
             $('.navbar').removeClass('py-2');
             $('.navbar').addClass('py-4');
         }
     }
 });
-</script>
-</body>
+  </script>
+  </div>
 </html>

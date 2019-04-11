@@ -2,17 +2,80 @@
 <html>
 <head>
 	<link rel="stylesheet" href="../packages/fontawesome-free-5.7.2-web/css/all.css">
-   <link rel="stylesheet" href="../home.css"/>
- 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <style>
 body{
 
    background: url('../images/background.png');
     background-repeat: repeat;
 }
+
+/*Navbar*/
+.contactbar a{
+  text-decoration: none;
+  color:white;
+}
+.contactbar a:hover{
+  color:white;
+
+}
+.dropdown li{
+  list-style: none;
+
+}
+.dropdown li :hover{
+  background:rgba(210,210,210,0.8);
+  
+  
+}
+.dropdown li a{
+  text-decoration: none;
+  color:black;
+}
+.dropdown li a:hover{
+  color:black;
+}
+.bar1, .bar2, .bar3 {
+              width: 35px;
+              height: 5px;
+              background-color: #fff;
+              margin: 6px 0;
+              transition: 0.4s;
+            }
+.black{
+  background-color: black;
+}
+.margin-negative{
+  margin-top:-10px;
+}
+.navbar-dark .nav-link{
+  color:white !important;
+}
+.no-focus:focus{
+  outline:none !important;
+}
+.navbar{
+  transition: 1s padding ease-in;
+}
+.dropdown-menu{
+  top:30px!important;
+  margin-top:2px;
+}
+.bg-black{
+  background-color: #222 !important;
+}
+/**********************************************/
 * {
   box-sizing: border-box;
 }
@@ -51,18 +114,6 @@ body{
   text-shadow: 10px;
   font-size:1em;
 }
-li:before{
-      content: "\25C8";
-      color:gold;
-      font-size:1em;
-    }
-    ul{
-      list-style-type: none;
-      clear:both;
-      color:white;
-      font-size:1em;
-      letter-spacing: 0em;
-    }
     .copyright
     {
       background-color:gold;
@@ -92,23 +143,137 @@ li:before{
   
   
 }
+/*********/
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .column1,.row1,.info1,.google-maps{
+    width:100%;
+
+  }
+
+/********/
 </style>
 </head>
 <body>
-   <div class="header">
-      <div class="contact">
-         <div class="info">
-             <a href="tel:+918360806758"><i class="fas fa-phone"></i> +91 8360806758</a>
-             <a href="mailto:jashan113114@gmail.com"><i class="far fa-envelope"></i> admin@hotel.com</a>
-         </div>
-         <div class="social">
-             <a href="https://www.facebook.com"><i class="fab fa-facebook fa-lg"></i></a>
-             <a href="https://www.google.com"><i class="fab fa-google-plus fa-lg"></i></a>
-             <a href="https://www.twitter.com"><i class="fab fa-twitter fa-lg"></i></a>
-         </div>
-      </div><br/>
-   </div>
+   <div class="contactbar p-1 black">
+            <div class="contactleft">
+                <a href="phone:9876543210" id="phone"><i class="fa fa-phone"></i> 9876543210</a>
+                <a href="mail:admin@email.com" id="email"><i class="fa fa-envelope"></i> admin@email.com</a>
+            
+            <div class="contactright float-right">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-square ml-1"></i></a>
+             <a href="https://www.google.com"><i class="fab fa-google-plus ml-1"></i></a>
+             <a href="https://www.twitter.com"><i class="fab fa-twitter ml-1"></i></a>
+            </div>
+        </div>  
+    </div>
+ <nav class="navbar navbar-expand-md py-4 bg-black navbar-dark sticky-top">
+   <button class="  mr-auto navbar-toggler no-focus " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <img class="" src="http://assets.limetray.com/assets/image_manager/uploads/4697/hamburger-icon.png" height="50">
+  </button><!-- Brand -->
+  <a href="#" class=" d-lg-none d-md-none "><img src="https://tajindiancuisine.com/wp-content/uploads/2018/04/taj_logo-0418.png" height="70" id="logo"/></a>
 
+  <!-- Toggler/collapsibe Button -->
+ 
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav mx-auto  ">
+      <li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        Hotel
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">News</a>
+                        <a class="dropdown-item" href="#">Gallery</a>
+                        <a class="dropdown-item" href="#">About Us</a>
+                        <a class="dropdown-item" href="#">History</a>
+                        <a class="dropdown-item" href="#">Offers</a>
+        
+      </div>
+    </li>
+  <li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        Rooms
+      </a>
+      <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Economy</a>
+                        <a class="dropdown-item" href="#">Standard</a>
+                        <a class="dropdown-item" href="#">Deluxe</a>
+                        <a class="dropdown-item" href="#">Presidential</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        Restaurants
+      </a>
+      <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Restaurant1</a>
+                        <a class="dropdown-item" href="#">Restaurant1</a>
+                        <a class="dropdown-item" href="#">Restaurant1</a>
+                        
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        Business
+      </a>
+      <div class="dropdown-menu">
+                <ul>
+                        <li><a href="#">Conference</a></li>
+                        <li><a href="#">Coffee Break</a></li>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Breakfasts</a></li>
+                        <li><a href="#">Banquet</a></li>
+                    </ul>
+      </div>
+    </li>
+    <a href="#" class="margin-negative py-1 d-none d-lg-block d-md-block"><img src="https://tajindiancuisine.com/wp-content/uploads/2018/04/taj_logo-0418.png" height="70" id="logo"/></a>
+    <li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        Events
+      </a>
+      <div class="dropdown-menu">
+                <ul>
+                        <li><a href="#">Wedding Reception</a></li>
+                        <li><a href="#">Anniversary</a></li>
+                        <li><a href="#">Prom</a></li>
+                        <li><a href="#">Bachelor Party</a></li>
+                        <li><a href="#">Family Events</a></li>
+                    </ul>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        Amenities
+      </a>
+      <div class="dropdown-menu">
+                <ul>
+                        <li><a href="#">Gym</a></li>
+                        <li><a href="#">Swimming Pool</a></li>
+                        <li><a href="#">Bistro</a></li>
+                        <li><a href="#">Cafes</a></li>
+                    </ul>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        Location
+      </a>
+      <div class="dropdown-menu">
+                <ul>
+                        <li><a href="#">Location</a></li>
+                        <li><a href="#">Sightseeing</a></li>
+                        <li><a href="#">Attractions</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+      </div>
+    </li>
+    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+      
+    </ul>
+  </div> 
+</nav> 
 
 
 <div style="padding:15px;text-align:center;color:white;font-size:2vw;">
@@ -167,4 +332,21 @@ li:before{
 <footer class="copyright">&copy; Copyright 2019</footer>
 
 </body>
+<script>
+  $(window).on('scroll', function () {
+    if ($(this).scrollTop() > 30) {
+      console.log("feel")
+        
+            $('.navbar').removeClass('py-4');
+            $('.navbar').addClass('py-2');
+        
+    } else {
+      console.log("feelnot")
+        if ($('.navbar').hasClass('py-2')) {
+            $('.navbar').removeClass('py-2');
+            $('.navbar').addClass('py-4');
+        }
+    }
+});
+  </script>
 </html>

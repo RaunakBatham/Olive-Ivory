@@ -275,7 +275,7 @@
       <div class="dropdown-menu">
       	<a class="dropdown-item" href="#">News</a>
                         <a class="dropdown-item" href="#">Gallery</a>
-                        <a class="dropdown-item" href="#">About Us</a>
+                        <a class="dropdown-item" href="./about-us/aboutus.html">About Us</a>
                         <a class="dropdown-item" href="#">History</a>
                         <a class="dropdown-item" href="#">Offers</a>
         
