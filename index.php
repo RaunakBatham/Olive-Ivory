@@ -324,11 +324,11 @@
       </a>
       <div class="dropdown-menu">
         				<ul>
-                        <li><a href="#">Wedding Reception</a></li>
-                        <li><a href="#">Anniversary</a></li>
-                        <li><a href="#">Prom</a></li>
-                        <li><a href="#">Bachelor Party</a></li>
-                        <li><a href="#">Family Events</a></li>
+                        <li><a href="./Events/wed.html">Wedding Reception</a></li>
+                        <li><a href="./Events/ann.html">Anniversary</a></li>
+                        <li><a href="./Events/prom.html">Prom</a></li>
+                        <li><a href="./Events/bach.html">Bachelor Party</a></li>
+                        <li><a href="./Events/family">Family Events</a></li>
                     </ul>
       </div>
     </li>
@@ -338,10 +338,10 @@
       </a>
       <div class="dropdown-menu">
         				<ul>
-                        <li><a href="#">Gym</a></li>
-                        <li><a href="#">Swimming Pool</a></li>
-                        <li><a href="#">Bistro</a></li>
-                        <li><a href="#">Cafes</a></li>
+                        <li><a href="./Amenities/gym.html">Gym</a></li>
+                        <li><a href="./Amenities/swim.html">Swimming Pool</a></li>
+                        <li><a href="./Amenities/bistro">Bistro</a></li>
+                        <li><a href="./Amenities/cafe.html">Cafes</a></li>
                     </ul>
       </div>
     </li>
@@ -351,14 +351,14 @@
       </a>
       <div class="dropdown-menu">
         				<ul>
-                        <li><a href="#">Location</a></li>
-                        <li><a href="#">Sightseeing</a></li>
-                        <li><a href="#">Attractions</a></li>
-                        <li><a href="#">Events</a></li>
+                        <li><a href="./Location/loc.html">Location</a></li>
+                        <li><a href="./Location/sight.html">Sightseeing</a></li>
+                        <li><a href="./Location/attract.html">Attractions</a></li>
+                        <li><a href="./Amenities/cultural.html">Events</a></li>
                     </ul>
       </div>
     </li>
-    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+    <li class="nav-item"><a class="nav-link" href="#cont">Contact Us</a></li>
       
     </ul>
   </div> 
@@ -406,7 +406,7 @@
             <div class="introbottom">
                 <p>ICON</p>
                 <p>The five-star Hotel Olive Ivory is a jewel of the 20th century architecture, located in the strict centre of Palawa City, Mumbai. Because of our prestigious location, we have already been a perfect haven for 10 years both for people travelling as a tourist, as well as for business purposes .</p>
-                <a href="aboutus.html">READ MORE</a>
+                <a href="./about-us/aboutus.html">READ MORE</a>
             </div>
         </div>
     </div>
@@ -434,7 +434,7 @@
   </div>
 
   <!---------------------------------------------------------------------------------------------------Footer--->
-  <div class="row1" style="background-color:  #333;">
+  <div class="row1" style="background-color:  #333;" id="cont">
   <div class="column1">
         <h1><b><p style="color:white">Address</p></b></h1>
         <p style="color:white">Chaadar Road<br>Takia Colony<br>Palawa City</p>
