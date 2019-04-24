@@ -1,0 +1,223 @@
+.contactbar a{
+	text-decoration: none;
+	color:white;
+}
+.contactbar a:hover{
+	color:white;
+
+}
+.dropdown li{
+	list-style: none;
+
+}
+.dropdown li :hover{
+	background:rgba(210,210,210,0.8);
+	
+	
+}
+.dropdown li a{
+	text-decoration: none;
+	color:black;
+}
+.dropdown li a:hover{
+	color:black;
+}
+.bar1, .bar2, .bar3 {
+              width: 35px;
+              height: 5px;
+              background-color: #fff;
+              margin: 6px 0;
+              transition: 0.4s;
+            }
+.black{
+	background-color: black;
+}
+.margin-negative{
+	margin-top:-10px;
+}
+.navbar-dark .nav-link{
+	color:white !important;
+}
+.no-focus:focus{
+	outline:none !important;
+}
+.navbar{
+	transition: 1s padding ease-in;
+}
+.dropdown-menu{
+	top:30px!important;
+	margin-top:2px;
+}
+.bg-black{
+  background-color: #222 !important;
+}
+/*-------------------------------------------------------------------------ReservationBAR*/
+.ReserveBar{
+    background-color: #eee;
+    margin-top: 10px;
+    height: auto;
+    text-align: center;
+  }
+  .ReserveBar input {
+    height: 2.5em;
+    width: 15em;
+    margin: 20px 10px;
+  }
+  .ReserveBar select{
+      height: 2.5em;
+      width: 10em;
+  }
+  /*---------------------------------------------------------------------END ReservationBAR*/
+
+  /*-------------------------------------------------------------------------AboutIntro*/
+  .aboutintro{
+      margin-top: 10px;
+      width: 100%;
+      background-color: gray;
+      background-image: url("../images/AboutBack.jpg");
+      height: 520px;
+      text-align: center;
+      padding-top: 50px;
+  }
+  .introbox{
+      background-color: white;
+      max-width: 320px;
+      margin: 0 auto;
+  }
+  .introbottom{
+      background-color: #333;
+      color: white;
+      padding: 20px;
+  }
+  .introbottom a{
+      text-decoration: none;
+      color: white;
+      border: 1px solid gold;
+      padding: 10px 50px;
+      white-space: nowrap;
+  }
+
+  /* Gallery */
+  * {
+    box-sizing: border-box;
+  }
+  .menu {
+    float:left;
+    width:20%;
+    text-align:center;
+    padding: 0 20px;
+  }
+  .menu a {
+
+    padding:8px;
+    margin-top:7px;
+    display:block;
+    width:100%;
+    color:black;
+  }
+  .main {
+    float:left;
+    width:80%;
+    padding:0 10%;
+    text-align: justify;
+    color:white;
+    letter-spacing: .05em;
+    font-family: montserratlight , sans-serif;
+    line-height: 170%;
+    font-size:2vw;
+  }
+  .left {
+    background-color:white;
+    float:left;
+    width:20%;
+    padding:30px;
+    margin-top:7px;
+    text-align:center;
+    text-shadow: 10px;
+    font-size:1em;
+  }
+      .column {
+    float: left;
+
+    width: 25%;
+    padding: 5px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  @media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    .menu, .main, .left ,ul,li,.column,.row{
+      width:100%;
+
+    }
+
+
+  }
+
+  /*Amenities*/
+  .amenities {
+          background-color: #ddd;
+      }
+      .amenities>div{
+          display: inline-block;
+          width: 19%;
+          text-align: center;
+          margin: 30px 0;
+      }
+      @media screen and (max-width: 670px){
+          .amenities>div{
+              display: block;
+              width: 100%;
+              margin: 0;
+              padding: 10px 0;
+          }
+      }
+
+      /**********************************************************************/
+          .column1 {
+    float: left;
+    padding: 5px;
+    width: 31%;
+  }
+  .row1::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .info1 {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    cursor: default;
+  }
+  .info1 * {
+    color: white;
+  }
+  .fab {
+    color: white;
+  }
+  .google-maps {
+          position: relative;
+          padding-bottom: 75%;
+          height: 0;
+          overflow: hidden;
+      }
+      .google-maps iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100% !important;
+          height: 100% !important;
+      }
+  @media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    .column1,.row1,.info1,.google-maps{
+      width:100%;
+
+    }
+
+
+  }

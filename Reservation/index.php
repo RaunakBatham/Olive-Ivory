@@ -1,10 +1,15 @@
 <?php
-  if(isset($_POST['start'],$_POST['people'],$_POST['start'])){
-    require '../includes/DB-Config.php';
-    session_start();
-    $_SESSION['startdate'] = $_POST['start'];
-    $_SESSION['end'] = $_POST['end'];
-    $_SESSION['people'] = $_POST['people'];
+  session_start();
+  require '../packages/include/DB-Config.php';
+  if(isset($_SESSION['start'], $_SESSION['end'], $_SESSION['people'])){
+    
+    if(isset($_POST['RoomInfo'])){
+      $_SESSION['RoomInfo'] = $_POST['RoomInfo'];
+      header('location: ../CustomerDetails');
+    }
+  }
+  else{
+    header('location: ../Error-404');
   }
 ?>
 <!DOCTYPE html>
@@ -282,35 +287,31 @@
 <!--------------------------------------------END OF CURRENT PAGE INDICATOR-->
 
 <!---------------------------------------------------------Reservation Form-->
-<form method="POST" action="../CustomerDetails">
-<div class="rooms">
+<div class="container">
+<form action="../CustomerDetails" method="POST">
+    <h1 style="text-align:center;margin: 10px 0;">Select Room</h1>
     <?php
-    $query = "SELECT * from rooms";
+    $query = "SELECT * from rooms where room_left>0";
     $result = mysqli_query($conn, $query);
     while($row= mysqli_fetch_assoc($result)){
-      echo '<div class="roominfo">';
-      echo '<img src="./images/image10.jpg" alt="RoomIMG"/>';
-      echo '<div class="roomnames">';
-      echo '<p>' . $row['room_name'] .'</p>';
-      echo '<p>' . $row['room_description'] . '</p>';
-      echo '</div>';
-      echo '<select name="quantity" id="quantity">';
-      echo '<option value="0">0</option>';
-      echo '<option value="1">1</option>';
-      echo '<option value="2">2</option>';
-      echo '<option value="3">3</option>';
-      echo '<option value="4">4</option>';
-      echo '</select>';
-      echo '<div class="roomprice">';
-      echo '<p>Room Cost</p>';
-      echo '<p>$' . $row['room_price'] . '</p>';
-      echo '</div>';
-      echo '<input type="submit" value="book"/>';
-      echo '</div>';
+    echo '<div class="row" style="margin:10px 0;background-color:#dfdfdf;padding:10px;">';
+    echo '    <div class="col offset-lg-0">';
+    echo '      <img src="./images/' . $row['room_pic'] . '" id="Room" width="100%" height="100"/>';
+    echo '    </div>';
+    echo '    <div class="col-lg-7">';
+    echo '        <p class="float-none" style="font-size:1.2em;"><strong>'. $row['room_name'] .'</strong></p>';
+    echo '        <p>' . $row['room_description'] . '</p>';
+    echo '    </div>';
+    echo '    <div class="col-lg-2 align-self-center">';
+    echo '        <p class="float-right">$' . $row['room_price'] . '</p>';
+    echo '    <button class="btn btn-primary float-right" type="submit" name="RoomInfo" value="' . $row['room_id'] . '">Select Room</button>';
+    echo '    </div>';
+    echo '</div>';
     }
     ?>
-</div>
 </form>
+</div>
+
 <!--------------------------------------------------End of Reservation Form-->
 
 <!---------------------------------------------------------------------------------------------------Footer--->

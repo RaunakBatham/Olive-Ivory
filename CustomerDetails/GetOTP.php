@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require '../vendor/autoload.php';
 use Twilio\Rest\Client;
 
@@ -11,7 +11,7 @@ $auth_token = '50ee110603a5a776f99c86272fe09fdc';
 
 // A Twilio number you own with SMS capabilities
 $twilio_number = "+19387777741";
-
+//$phone = "+91" . $_GET['phone'];
 $otp = mt_rand(1000,9999);
 $client = new Client($account_sid, $auth_token);
 $client->messages->create(
@@ -23,6 +23,8 @@ $client->messages->create(
     )
 );
 
-setcookie('OTP', $otp, time() + (5), "/");
-
+$_SESSION['OrigOTP'] = $otp;
+error_log(print_r($_SESSION['OrigOTP'], TRUE));
+//echo $otp;
+header('location: ./');
 ?>

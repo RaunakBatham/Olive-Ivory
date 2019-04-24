@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -271,12 +275,17 @@
     <div class="confirmation">
         <h1>Congrats, Rooms Booked</h1>
         <h3>Persons : </h3>
-        <p>Person1<br/>
-        Person2<br/>
-        Person3</p>
-        <h3>Rooms : </h3>
-        <p>Room1 * 2</p>
-
+        <p>
+        <?php
+          foreach($_SESSION['name'] as $person){
+            echo $person . '<br/>';
+          }
+        ?>
+        </p>
+        <h3>Email : </h3>
+        <p><?php echo $_SESSION['email'];?></p>
+        <h3>Phone : </h3>
+        <p><?php echo $_SESSION['phone'];?></p>
     </div>
     <!--------------------------------------------------End of Reservation Form-->
 

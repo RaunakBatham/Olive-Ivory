@@ -1,5 +1,38 @@
 <?php
 session_start();
+
+if(isset($_POST["email"], $_POST["phone"])){
+  include '../packages/include/DB-Config.php';
+  
+  $query = 'INSERT into bookings(booking_email, booking_phone, room_id, room_quantity, created_at, updated_at) values("' . $_POST["email"] . '","' . $_POST["phone"] . '",1, 1, NULL, NULL)';
+  if(!mysqli_query($conn, $query)){
+    die('Error in Booking. Please Try Again' . mysqli_error($conn));
+  }
+
+  $query = 'update rooms set room_left = room_left - 1 where room_id = $_POST["room_id"]';
+  $result = mysqli_query($conn, $query);
+
+  $query = 'select * from bookings where booking_email="' . $_POST["email"] . '"';
+  $result = mysqli_query($conn, $query);
+  if($row = mysqli_fetch_assoc($result)){
+    $bookingid = $row['booking_id'];
+  }
+
+  foreach($_POST["name"] as $person){
+    $query = 'insert into guests(booking_id, guest_name, created_at, updated_at) values(' . $bookingid . ',"' . $person . '", NULL, NULL)';
+    if(!mysqli_query($conn, $query)){
+      die('Error in Booking. Please Try Again' . mysqli_error($conn));
+    }
+  }
+
+  $_SESSION['name'] = $_POST['name'];
+  $_SESSION['email'] = $_POST['email'];
+  $_SESSION['phone'] = $_POST['phone'];
+  
+  header('location: ../RoomConfirmation');
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -267,34 +300,37 @@ session_start();
 
     
     <!---------------------------------------------------------Reservation Form-->
-    <form method="POST" action="../RoomConfirmation">
-    <div class="details">
-    <div class="mx-auto" style="max-width:800px;">
+    <form method="POST" onsubmit="return checkotp()">
+      <div class="details">
+      <div class="mx-auto" style="max-width:800px;">
         <h1>Customers Information</h1>
         <hr>
-        <form action="../RoomConfirmation" method="post">
-        <?php
-        for($i = 0; $i < $_SESSION['people']; $i++){
-        echo '<div class="form-group mx-auto">';
-        echo '    <div class="input-group">';
-        echo '        <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></div><input class="form-control" type="text" name="name" required="" placeholder="Person Name" id="from-name"></div>';
-        echo '    </div>';
-        }
-        ?>
+          <?php
+            for($i = 1; $i <= $_SESSION['people']; $i++){
+            echo '<div class="form-group mx-auto">';
+            echo '    <div class="input-group">';
+            echo '        <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></div><input class="form-control" type="text" name="name[' . $i . ']" required="" placeholder="Person '. $i .' Name" id="from-name"></div>';
+            echo '    </div>';
+            }
+          ?>
         <div class="form-group mx-auto"><label for="from-email">Email</label>
             <div class="input-group">
-                <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-envelope"></i></span></div><input class="form-control" type="text" name="email" required="" placeholder="Email Address" id="from-email"></div>
+                <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-envelope"></i></span></div>
+                <input class="form-control" type="text" name="email" required="" placeholder="Email Address" id="from-email">
+            </div>
         </div>
         <div class="form-group mx-auto"><label for="from-phone">Phone</label>
             <div class="input-group">
-                <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-phone"></i></span></div><input class="form-control" type="text" name="phone" required="" placeholder="Primary Phone" id="from-phone">
-                <button class="btn btn-success" style="margin-left: 5px;" onclick="event.preventDefault();GetOTP()">Get OTP</button>
+                <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-phone"></i></span></div>
+                <input class="form-control" type="text" name="phone" required="" placeholder="Primary Phone" id="from-phone">
+                <button class="btn btn-success" style="margin-left: 5px;" onclick="event.preventDefault();window.location.href='/CustomerDetails/GetOTP.php';">Get OTP</button>
             </div>
-            <input class="form-control" type="text" name="otp" required="" placeholder="OTP" maxlength="4" minlength="4" id="from-phone" style="width: 30%;margin-top: 5px;">
+            <input class="form-control" type="text" name="otp" required="" placeholder="OTP" maxlength="4" minlength="4" id="otp" style="width: 30%;margin-top: 5px;">
+            <div class="alert alert-danger" id="otperror" style="display:none">Invalid OTP</div>
+              <button class="btn btn-primary" type="submit" style="margin: 10px 0;">Continue Booking</button>
+          </div>
     </div>
-    <button class="btn btn-primary" type="submit" style="margin: 10px 0;">Continue Booking</button>
     </form>
-</div>
     <!--------------------------------------------------End of Reservation Form-->
 
 
@@ -334,13 +370,10 @@ session_start();
 <script>
 	$(window).on('scroll', function () {
     if ($(this).scrollTop() > 30) {
-    	console.log("feel")
-        
             $('.navbar').removeClass('py-4');
             $('.navbar').addClass('py-2');
         
     } else {
-    	console.log("feelnot")
         if ($('.navbar').hasClass('py-2')) {
             $('.navbar').removeClass('py-2');
             $('.navbar').addClass('py-4');
@@ -348,11 +381,20 @@ session_start();
     }
 });
 
-
-function GetOTP() {
-  console.log('rer');
-    // function below will run clear.php?h=michael
-    $.ajax({url: "CustomerDetails/GetOTP.php"});
+<?php
+    $otp="";
+    if(isset($_SESSION['OrigOTP'])){
+        $otp = $_SESSION['OrigOTP'];
+    }
+?>
+function checkotp(){
+    if(document.getElementById("confirmotp").value == <?php echo $otp; ?> ){
+        return true;
+    }
+    else{
+        document.getElementById("otperror").style.display = "block";
+        return false;
+    }
 }
 </script>
 </body>
